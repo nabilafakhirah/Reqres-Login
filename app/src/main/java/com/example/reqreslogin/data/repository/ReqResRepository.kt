@@ -1,5 +1,6 @@
 package com.example.reqreslogin.data.repository
 
+import androidx.paging.PagingData
 import com.example.reqreslogin.data.model.LoginRequest
 import com.example.reqreslogin.data.model.LoginResponse
 import com.example.reqreslogin.data.model.UserResponse
@@ -8,5 +9,5 @@ import kotlinx.coroutines.flow.Flow
 
 interface ReqResRepository {
     fun login(request: LoginRequest): Flow<DataResult<LoginResponse>>
-    fun getUsers(page: Int): Flow<DataResult<UserResponse>>
+    fun getUsers(): Flow<PagingData<UserResponse.UserDto>>
 }

@@ -33,7 +33,6 @@ class MainActivity : ComponentActivity() {
                 ) {
                     val token = preferencesManager.getData(TOKEN_KEY)
                     val isLoggedIn = token != DEFAULT_TOKEN
-                    NavGraph(navController = navController, isLoggedIn)
                     NavGraph(navController = navController, isLogin = isLoggedIn)
                 }
             }

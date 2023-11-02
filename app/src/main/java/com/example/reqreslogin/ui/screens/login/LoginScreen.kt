@@ -65,20 +65,24 @@ fun LoginScreen(
         Text(text = "Login", style = TextStyle(fontSize = 40.sp, fontFamily = FontFamily.Cursive))
 
         Spacer(modifier = Modifier.height(20.dp))
-        Text(
-            text = "Email",
-            style = Typography.body2
-        )
         TextField(
+            label = {
+                Text(
+                    text = "Email",
+                    style = Typography.body2
+                )
+            },
             value = email,
             onValueChange = { email = it })
 
         Spacer(modifier = Modifier.height(20.dp))
-        Text(
-            text = "Password",
-            style = Typography.body2
-        )
         TextField(
+            label = {
+                Text(
+                    text = "Password",
+                    style = Typography.body2
+                )
+            },
             value = password,
             visualTransformation = PasswordVisualTransformation(),
             keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Password),
